@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おみくじアプリ</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>おみくじ</h1>
+        
+        <div class="omikuji-section">
+            <button id="drawButton" class="draw-button">おみくじを引く</button>
+            
+            <div id="resultDisplay" class="result-display" style="display: none;">
+                <div class="result-text" id="resultText"></div>
+            </div>
+        </div>
+
+        <div class="management-section">
+            <button id="toggleButton" class="toggle-button">結果を管理する</button>
+
+            <div id="managementPanel" class="management-panel" style="display: none;">
+                <h2>結果の管理</h2>
+                
+                <div class="add-result-form">
+                    <input type="text" id="newResultName" placeholder="結果名（例: 超吉）">
+                    <input type="number" id="newResultOrder" placeholder="表示順（省略可）">
+                    <button id="addButton">追加</button>
+                </div>
+
+                <div class="results-list">
+                    <h3>現在の結果一覧</h3>
+                    <ul id="resultsList"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
